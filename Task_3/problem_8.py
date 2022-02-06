@@ -1,10 +1,6 @@
 #!/bin/python3
 
 import math
-import os
-import random
-import re
-import sys
 
 #
 # Complete the 'sockMerchant' function below.
@@ -14,6 +10,7 @@ import sys
 #  1. INTEGER n
 #  2. INTEGER_ARRAY ar
 #
+
 
 def sockMerchant(n, ar):
     # Write your code here
@@ -25,15 +22,12 @@ def sockMerchant(n, ar):
         n += math.floor(arr[i])
     return n
 
+
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = int(input().strip())
-
-    ar = list(map(int, input().rstrip().split()))
+    n = int(input())
+    ar = list(map(int, input().split()))
 
     result = sockMerchant(n, ar)
 
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+    print(str(result) + '\n')
